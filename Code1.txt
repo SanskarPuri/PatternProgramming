@@ -1,0 +1,46 @@
+package Patterns;
+import java.util.Scanner;
+
+public class trianglePattern {
+	public static void main(String args[]) {
+		// Here we input the Scanner class to take input.
+		
+		Scanner take = new Scanner(System.in);
+		int n; // declaration of variable.
+		System.out.println("Enter the value of n: ");
+		n=take.nextInt();
+		
+		// To print the Right-angled triangle using for loop.
+		// outer loop to print our rows.
+		for(int i=1; i<=n; i++) {
+			//inner loop to print our columns.
+			for(int j=1; j<=i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		System.out.println();
+		
+		// To print the Inverted right-angled triangle.
+		for(int i=n; i>=1; i--) {
+			for(int j=1; j<=i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		System.out.println();
+		
+		// To print the Righ-angled triangle by 180 degree
+		
+		for(int i=1; i<=n; i++) {
+			for(int j=1; j<=n-i; j++) {
+				System.out.print(" "); // to print n-i spaces
+			}
+			for(int j=1; j<=i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+
+	}
+}
