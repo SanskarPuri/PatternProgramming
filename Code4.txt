@@ -1,0 +1,52 @@
+package Patterns;
+import java.util.Scanner;
+
+public class ButterflyPAttern {
+	public static void main(String args[]) {
+		Scanner input=new Scanner(System.in);
+		System.out.println("Enter the number n: ");
+		int n=input.nextInt();
+		// to print the right triangle
+		
+		for(int i=1; i<=n; i++) {
+			for(int j=1; j<=i; j++) {
+				System.out.print("*");
+			}
+			System.out.print("");
+			// rotate by 180 degree
+			for(int j=1; j<=n-i; j++) {
+				System.out.print(" ");
+			}
+			for(int j=1; j<=n-i; j++) {
+				System.out.print(" ");
+			}
+			for(int j=1; j<=i; j++) {
+				System.out.print("*");
+			}
+			
+			System.out.println(" ");
+			
+		}
+		
+		// for inverted right triangle
+		for(int i=n-1; i>=1; i--) {
+			for(int j=1; j<=i; j++) {
+				System.out.print("*");
+			}
+			System.out.print("");
+			// to invert right triangle by 180 degree
+			for(int j=1; j<=n-i; j++) {
+				System.out.print(" ");
+			}
+			for(int j=1; j<=n-i; j++) {
+				System.out.print(" ");
+			}
+			for(int j=1; j<=i; j++) {
+				System.out.print("*");
+			}
+			
+			System.out.println("");
+		}
+		}
+	}
+
