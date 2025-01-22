@@ -1,0 +1,25 @@
+package Patterns;
+import java.util.Scanner;
+public class pyramidPattern {
+	public static void main(String args[]) {
+		
+		Scanner take = new Scanner(System.in);
+		int n; // declaration of variable.
+		System.out.println("Enter the value of n: ");
+		n=take.nextInt();
+		// To print the Pyramid.
+		for(int i=1; i<=n; i++) {
+			for(int j=1; j<=n-i; j++) { // to print n-i spaces.
+				System.out.print(" ");
+			}
+			/* here we use (2*i-1) to print 
+			 * the complete equilateral triangle */
+			
+			for(int j=1; j<=(2*i-1); j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+
+}
